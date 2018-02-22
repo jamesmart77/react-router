@@ -13,7 +13,6 @@ class Landing extends Component {
     return (
       <Container>
         <h1>Landing Page Goes Here</h1>
-
       </Container>
     );
   }

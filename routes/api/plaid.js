@@ -5,11 +5,5 @@ const plaidController = require("../../controllers/plaidController");
 router.route("/get_access_token")
   .post(plaidController.getPrivateKey);
 
-// Matches with "/api/books/:id"
-// router
-//   .route("/:id")
-//   .get(booksController.findById)
-//   .put(booksController.update)
-//   .delete(booksController.remove);
 
 module.exports = router;

@@ -13,7 +13,6 @@ class Testing extends Component {
     return (
       <Container>
         <h1>This is a testing page for logins</h1>
-
       </Container>
     );
   }

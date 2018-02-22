@@ -2,6 +2,7 @@ import decode from 'jwt-decode';
 import auth0 from 'auth0-js';
 import history from './history';
 
+
 const ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
 
@@ -23,6 +24,22 @@ export function login() {
     // audience: AUDIENCE,
     scope: SCOPE
   });
+}
+
+export function signUp(){
+  auth.signup(
+    {
+      connection: "CONNECTION",
+      email: "EMAIL",
+      password: "PASSWORD",
+      user_metadata: { plan: "silver", team_id: "a111" }
+    },
+    function(err) {
+      if (err) return alert("Something went wrong: " + err.message);
+      return alert("success signup without login!");
+    }
+  );
+
 }
 
 export function logout() {

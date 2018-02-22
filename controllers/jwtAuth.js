@@ -8,7 +8,6 @@ secret.tokenSecret = process.env.tokenSecret;
 //middleware to validate token
 module.exports = function (req, res, next) {
     //console.log("Headers: " + req.headers);
-
     var obj = req.cookies;
     var cookieToken;
 
