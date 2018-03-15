@@ -1,0 +1,69 @@
+
+/*
+.select-wrapper input.select-dropdown {
+    background-color: transparent;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 2rem;
+    padding: 4px 4px 4px 4px;
+    text-indent: 1rem;
+}
+
+
+.select-dropdown.dropdown-content li.active {
+    background-color: transparent;
+}*/
+
+/*----------------------------------------
+    Modal Checkbox Fixes
+------------------------------------------*/
+
+
+
+
+
+.modal .input-field label {
+    position: absolute;  /* this is fucking up the multi-select */
+    top: -26px;
+    font-size: 0.9rem;
+}
+
+.input-field.col .dropdown-content [type="checkbox"]+label {
+    top: 0px;
+    left: 0;
+    height: 25px;
+}
+
+[type="checkbox"]+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}

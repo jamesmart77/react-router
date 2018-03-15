@@ -1,0 +1,1135 @@
+/*---------------------------------
+    Font Imports
+-----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Gurajada|Poller+One|Roboto:400,500,700,900|Roboto+Slab:300,700|Rubik:300,400|Scope+One|Slabo+13px|Source+Sans+Pro:200,300,400,600,700');
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+
+font-family: 'Scope One', serif;     // old font (no weights)
+font-family: 'Roboto Slab', serif;   // new font (weights)
+font-family: 'Slabo 13px', serif;
+font-family: 'Gurajada', serif;
+
+
+font-family: 'Abril Fatface', cursive;
+font-family: 'Poller One', cursive;
+
+*/
+/*---------------------------------
+    Fix for sticky footer
+-----------------------------------*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*---------------------------------
+    Common
+-----------------------------------*/
+a {
+    text-decoration: none;
+    font-variant: normal;
+}
+
+html {
+    line-height: 1.8;
+    /*font-family: "Roboto", sans-serif !important;*/
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+p {
+    /*font-family: "Rubik", sans-serif;*/
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 4.2rem;
+    line-height: 110%;
+    margin: 2.1rem 0 1.68rem 0;
+}
+
+h2 {
+    font-size: 3.56rem;
+    line-height: 110%;
+    margin: 1.78rem 0 1.424rem 0;
+}
+
+h3 {
+    font-size: 2.92rem;
+    line-height: 110%;
+    margin: 1.46rem 0 1.168rem 0;
+}
+
+h4 {
+    font-size: 2.28rem;
+    line-height: 110%;
+    margin: 1.14rem 0 0.912rem 0;
+}
+
+h5 {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 0.82rem 0 0.656rem 0;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 110%;
+    margin: 0.5rem 0 0.4rem 0;
+}
+
+em {
+    font-style: italic;
+}
+
+/* update for React sticky footer -mf */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    zIndex: 999999;
+}
+
+.shadow {
+    -webkit-filter: drop-shadow( 1px 1px 3px #00000029 );
+    filter: drop-shadow( 1px 1px 3px #00000029 );
+}
+
+.no-caps {
+    text-transform: none !important;
+}
+
+/*---------------------------------
+    Material Icons
+-----------------------------------*/
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* fix to align text & icons */
+.material-icons.inflex {
+    display: inline-flex;
+    vertical-align: top;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+    color: white;
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.topnav-menu .material-icons {
+    text-shadow: 1px 1px 1px #878787;
+}
+
+/*---------------------------------
+    Sidebar
+-----------------------------------*/
+.brand-sidebar {
+    position: fixed;
+    left: 0;
+    width: 240px;
+    top: 0px;
+    z-index: 9;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/*---------------------------------
+    Materialize Overrides
+-----------------------------------*/
+.container {
+    width: 85%;
+}
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 2rem;
+    padding: 4px 4px 4px 4px;
+    text-indent: 1rem;
+}
+
+/* input file label (inactive) */
+/*
+.input-field label {
+    color: #9e9e9e;
+    position: absolute;
+    top: 0.8rem;
+    left: 1.7rem;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-out;
+}
+
+.input-field label.active {
+    top: 0.2rem;
+    left: 1.5rem;
+}
+*/
+
+.grow {
+    transition: all .1s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.15);
+}
+
+.select-wrapper input.select-dropdown {
+    background-color: transparent;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 2rem;
+    padding: 4px 4px 4px 4px;
+    text-indent: 1rem;
+}
+
+.row {
+    /*margin-bottom: 0.3rem;*/
+    margin-bottom: 0;
+}
+
+.btn,
+.btn-large {
+    background-color: #55657c;
+    border-radius: 4px;
+    text-transform: none;
+    box-shadow: none;
+    text-shadow: 0px 1px 0 #1b1b1b55;
+    border-bottom: 4px solid #0a0a0a33;
+}
+
+.btn:hover {
+    background-color: #77879e;
+}
+
+.btn:focus {
+    background-color: #55787c;
+}
+
+.btn:active {
+    background-color: #71a1a7;
+}
+
+.btn.primary {
+    background-color: #989898;
+}
+
+.btn.secondary {
+    background-color: #b1b1b1;
+}
+
+.btn-floating {
+    border-radius: 50%;
+}
+
+.mobile-fab-tip {
+    position: fixed;
+    right: 85px;
+    padding: 0px 0.5rem;
+    text-align: right;
+    /*background-color: #323232;*/
+    background-color: #1b1b1be8;
+    border-radius: 0.7rem;
+    color: #FFF;
+    width: auto;
+}
+
+.main-actions .mobile-fab-tip {
+    text-shadow: 1px solid #ccc;
+}
+
+.main-actions .btn-floating {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+
+
+/*---------------------------------
+    Cards
+-----------------------------------*/
+
+
+.card .card-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Footer Height  */
+.page-footer .footer-copyright {
+    min-height: 20px;
+}
+
+.page-footer {
+    padding-top: 15px;
+}
+
+a.footer-yellow {
+    color: #e4c883 !important;
+}
+
+/* Page Logo */
+.header-logo {
+    position: relative;
+    left: 2rem;
+
+    /* moves the logo over to the left */
+    float: left;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-shadow: 1px 2px 2px #33333345;
+}
+
+/*header font style*/
+.header-logo  h5 {
+    text-shadow: 1px 1px 1px #3333336e;
+}
+
+/* TODO: remove? */
+.dash-title {
+    font-family: 'Scope One', serif;
+    color: #666;
+}
+
+h4.dash-title {
+    font-family: 'Roboto Slab', serif;
+    color: #666;
+    text-transform: none;
+}
+
+.topnav-menu {
+    position: relative;
+    right: 2rem;
+
+    /* moves the logo over to the left */
+}
+
+.footer-detail {
+    overflow: hidden;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card {
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+
+
+/*---------------------------------
+    Tabs
+-----------------------------------*/
+
+/* default tab settings */
+.tabs .tab {
+    font-family: 'Scope One', serif;
+    text-transform: none;
+}
+
+.tabs .tab a.active {
+    color: #666;
+}
+
+.tabs .tab a:hover {
+    color: #666;
+}
+
+.tabs .tab a {
+    color: #666;
+}
+
+/* selected tab underline */
+.tabs .indicator {
+    background-color: #666;
+}
+
+.side-tab-header {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.25rem;
+    text-transform: none;
+
+    /*font-weight: 700;*/
+    color: #444;
+}
+
+.alert-name {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+}
+
+.collapsible {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.collection.striped .collection-item:nth-child(odd) {
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+
+span.badge.new {
+    border-bottom: 3px solid #0a0a0a33;
+}
+
+/*----------------------------------------
+    Right Slideout
+------------------------------------------*/
+
+#right-search .input-field {
+    margin-top: 0;
+}
+
+#user-slideout {
+    top: 64px;
+    overflow: hidden;
+}
+
+#user-slideout.side-nav {
+    width: 300px;
+    height: calc(100% - 64px) !important;
+    padding-bottom: 0px;
+}
+
+#user-slideout .fixed-line-height {
+    line-height: 24px;
+}
+
+#user-slideout .switch label input[type=checkbox]:checked + .lever:after {
+    background-color: rgb(38, 165, 153);
+}
+
+#user-slideout .switch label .lever:after {
+    background-color: #f5f5f5;
+}
+
+#user-slideout #chatapp li {
+    line-height: 35px !important;
+    min-height: 70px !important;
+}
+
+#user-slideout #chatapp .side-nav li {
+    line-height: 20px !important;
+}
+
+.chat-close-collapse {
+    padding: 5px 15px 0 0;
+}
+
+.icon-bg-color {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 20px;
+}
+
+.border-bottom-1 {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.activity::before {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    margin-top: 130px;
+    bottom: 0;
+    left: 16%;
+    width: 1px;
+    margin-left: -1px;
+    content: "";
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+
+/*----------------------------------------
+    Dashboard Gig Widget
+------------------------------------------*/
+
+.gig-dash-card {
+}
+
+/* dashboard in/out/net total */
+.gig-dash-total {
+    font-size: 2rem;
+}
+
+/* dashboard in/out/net title */
+.gig-dash-subtitle {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    color: #ccc;
+}
+
+.gig-dash-loss,
+.gig-dash-gain {
+    position: relative;
+    top: 0.25rem;
+}
+
+.gig-dash-loss {
+    font-family: 'Roboto', sans-serif;
+    color: #F16072;
+}
+
+.gig-dash-gain {
+    font-family: 'Roboto', sans-serif;
+    color: #F7B23F;
+}
+
+.gig-dash-card a {
+    color: #464444;
+}
+
+/*----------------------------------------
+    Dashboard Accounts List
+------------------------------------------*/
+.account-total {
+    font-family: 'Roboto', sans-serif;
+    color: #777;
+    text-align: right !important;
+}
+
+.goal-total {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #56BE89;
+}
+
+.dashboard-action-btn {
+    background-color: #009587;
+}
+
+.dashboard .collapsible-body {
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+}
+
+.goal-summary .chip,
+.account-summary .chip,
+.dashboard .chip {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    color: #fff;
+    border-bottom: 0.1rem solid #0000001a;
+}
+
+.goal-summary .chip {
+    background-color: #598694;
+}
+
+.goal-summary .default.chip {
+    background-color: #598694;
+}
+
+.account-summary .chip {
+    background-color: #da825f;
+}
+
+.account-summary .default.chip {
+    background-color: #da825fd6;
+}
+
+
+
+.dashboard .chip {
+    background-color: #558EB0d6;
+}
+
+.chip a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.chip a:hover {
+    color: #ffffff4f;
+}
+
+
+.dashboard .collections-title {
+}
+
+.dashboard .collapsible-body:nth-child(odd) {
+    background-color: #fff;
+}
+
+.dashboard .collapsible-body:nth-child(even) {
+    background-color: #f2f2f280;
+}
+
+.dashboard .collections-title {
+    font-size: 1rem;
+}
+
+.dashboard .collections-title.goal {
+    font-size: 1rem;
+}
+
+.dashboard.collapsible-header {
+    font-family: 'Scope One', serif;
+    color: #943d07cf;
+    background-color: #f6b4a0;
+}
+
+span.balance {
+    color: #86C285;
+}
+
+.collapsible.dashboard {
+    border-top: 1px solid #b5340ba3;
+    border-right: 1px solid #b5340b63;
+    border-left: 1px solid #b5340b63;
+}
+
+.collapsible.dashboard.active {
+    border-bottom: 1px solid #bbb8b8;
+}
+
+.collapsible.dashboard span.badge,
+.collapsible.dashboard span.badge.negative {
+    font-family: 'Rubik', sans-serif;
+    margin-left: 1rem;
+}
+
+.collapsible.dashboard span.badge {
+    background-color: #E68A19;
+}
+
+.collapsible.dashboard span.badge.negative {
+    background-color: #bb031b;
+}
+
+a.gig-frequency,
+a.account-actions {
+    color: #333;
+    font-size: 1rem;
+}
+
+.gig-frequency .material-icons,
+.account-actions .material-icons {
+    vertical-align: bottom;
+}
+
+.account-view-card a,
+.account-view-card a:active {
+    color: #3d3d3d !important;
+}
+
+a.side-headers {
+    color: #3d3d3d !important;
+}
+
+a.side-headers:hover,
+.account-view-card a:hover {
+    text-decoration: underline;
+}
+
+
+.gig-dropdown .dropdown-content li>a,
+.dropdown-content li>span {
+    font-size: 1rem;
+}
+
+.gig-dash-card .card-title {
+    color: #3f464a;
+    text-shadow: 1px 1px 1px #3333333b;
+}
+
+/*---------------------------------
+    Main Menu
+-----------------------------------*/
+.dropdown-content .title {
+
+}
+
+.dropdown-content ul li:hover {
+   background-color: red;
+}
+
+.dropdown-content li.submenu>a:before,
+.dropdown-content li.submenu>span:before {
+    content: "• ";
+}
+
+.dropdown-content li.submenu>a,
+.dropdown-content li.submenu>span {
+    background-color: #f1f1f1;
+    color: #121325;
+    font-size: 0.9rem;
+    padding: 1rem 3rem;
+}
+
+/*----------------------------------------
+    Gig Summary
+------------------------------------------*/
+
+.account-summary .collapsible-body,
+.goal-summary .collapsible-body,
+.gig-summary .collapsible-body {
+    padding: 2px 4px 2px 4px;
+}
+
+.account-summary.collection.with-header,
+.goal-summary.collection.with-header,
+.gig-summary.collection.with-header {
+    padding-left: 0;
+}
+
+.gig-summary.collection.with-header .collection-item {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.account-summary .collapsible-header,
+.goal-summary .collapsible-header,
+.gig-summary .collapsible-header {
+    padding: 0 0.15rem 0.15rem 0;
+    vertical-align: middle;
+}
+
+.expense-summary.card {
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+}
+
+.expense-summary.card .card-content,
+.expense-summary.card .card-reveal {
+    padding: 0 1rem 0 1rem;
+    border-radius: 0 0 2px 2px;
+}
+
+.expense-summary.card .card-title {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.collapsible-header .header-expand-state.material-icons {
+    position: absolute;
+    right: 1rem;
+    line-height: 2rem;
+    float: right;
+    color: #f5f5f5;
+}
+
+.expense-summary.card .card-content .card-title i {
+    line-height: 1rem;
+}
+
+/*----------------------------------------
+    Account Detail
+------------------------------------------*/
+
+.datatable .chip {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    background-color: #558EB0; /*#56BE89;*/
+    color: #fff;
+}
+
+
+.datatable input {
+    background-color: #2a546036;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-size: 1rem;
+    text-indent: 0.1rem;
+}
+
+.datatable th {
+    font-weight: 700;
+}
+
+.row-expense {
+    /*background-color: #ff3e3e0a !important;*/
+}
+
+.row-deposit {
+    /*background-color: #3eff8417 !important;*/
+}
+
+
+input.editable-cell {
+
+}
+
+/*
+.side-collection {
+    box-shadow: none;
+}
+
+.collection .side-collection {
+    padding: none !important;
+    margin: none;
+}
+
+
+.side-collection .collection-item {
+    padding: none !important;
+    margin: none;
+}
+
+.side-collection .collection-header {
+    font-family: 'Scope One', serif;
+}
+
+*/
+
+
+
+/*----------------------------------------
+    LANDING PAGE
+------------------------------------------*/
+
+.header {
+    background-color: #263238;
+    height: 450px;
+    /* background: url(../img/headerbkg.png);  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* opacity: .8; */
+    /* height:450px; */
+}
+
+.pullquoteblock {
+    background-color: #263238;
+    height: 250px;
+    /* background: url(../img/headerbkg.png);  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* opacity: .8; */
+    /* height:450px; */
+}
+
+
+    .vignette {
+        -webkit-box-shadow: inset 0px 0px 185px rgba(0,0,0,0.4);
+        -moz-box-shadow:    inset 0px 0px 185px rgba(0,0,0,0.4);
+        box-shadow:         inset 0px 0px 185px rgba(0,0,0,0.4);
+  }
+
+.header2 {
+    /* background-color: blue; */
+    /* height: 350px; */
+    text-align: center;
+    /* background-color: #d0d0d0; */
+    margin: 10px 0px 10px 0;
+    padding: 80px 0px 80px 0px;
+}
+
+.header1 {
+    /* background-color: blue; */
+    /* height: 350px; */
+    text-align: center;
+    margin: 10px 0px 10px 0;
+    display:flex;
+    flex-wrap: wrap;
+    /* padding: 50px 0px 50px 0px; */
+}
+
+.headerTitle {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 3px;
+    opacity: .8;
+}
+
+.signUpButton {
+    text-align: center;
+    margin: 50px;
+    text-transform: uppercase;
+}
+
+img.productIMG {
+    width: 100%;
+    height: auto;
+}
+
+/*
+.landingList {
+    text-align: left;
+} */
+
+.row .landingImg1 {
+    /* margin: 25px 0 0 0; */
+    background-color: #009688;
+    padding: 50px 50px 50px 50px;
+}
+
+.row .landingImg2 {
+    /* margin: 25px 0 0 0; */
+    background-color: #263238;
+    padding: 50px 50px 50px 50px;
+}
+
+.row .landingImg3 {
+    /* margin: 25px 0 0 0; */
+    background-color: #e64a19;
+    padding: 50px 50px 50px 50px;
+}
+
+.productTitle {
+    font-family: 'Roboto Slab', serif;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 110%;
+    color: white;
+    text-align: center;
+}
+
+.productText {
+    font-family: 'Rubik', sans-serif;
+    /* text-transform: uppercase; */
+    font-size: 1rem;
+    line-height: 110%;
+    color: white;
+    text-align: center;
+}
+
+.titleHead {
+    font-family: 'Roboto Slab', serif;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+    font-size: 3.28rem;
+    line-height: 110%;
+    color: white;
+    text-align: center;
+    padding: 125px 0 0 0;
+}
+
+.pullquote {
+    font-family: 'Roboto Slab', serif;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+    font-size: 2.28rem;
+    line-height: 110%;
+    color: white;
+    letter-spacing: 5px;
+    text-align: center;
+     opacity: .3;
+    /* padding: 100px 0 0 0; */
+}
+
+.landingListTitle {
+    font-family: 'Roboto Slab', serif;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 150%;
+    color: #263238;
+    /* opacity: .5; */
+    /* text-align: left; */
+    padding-bottom: 15px;
+}
+
+.taggedLine {
+    color: #009688;
+    padding: 1px;
+    margin: 10px;
+}
+
+.taggedLine2 {
+    color: #e64a19;
+    padding: 1px;
+    margin: 10px;
+}
+
+
+/* .modalSpace {
+    margin: 10px;
+} */
+
+
+/* This is a hack for the multiselect dropdown on the edit a goal modal */
+.multiselectStyle {
+    width: 60%;
+}
+
+
+/*----------------------------------------
+    Modal Fixes
+------------------------------------------*/
+
+.modal .modal-content {
+    /*height: 80%;*/
+}
+
+
+.modal .select-wrapper input.select-dropdown {
+    background-color: transparent;
+    border: 1px solid #66666621;
+    border-radius: 4px;
+    height: 2rem;
+    padding: 4px 4px 4px 4px;
+    text-indent: 1rem;
+    bottom: -0.6rem;  /* not sure about this */
+}
+
+.select-wrapper span.caret {
+    bottom: -0.6rem;  /* not sure about this either */
+}
+
+.modal .dropdown-content {
+    background-color: #fff;
+    margin: 0;
+    display: none;
+    min-width: 100px;
+    max-height: 650px;
+    overflow-y: auto;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    will-change: width, height;
+}
+
+.modal .dropdown-content li {
+    clear: both;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    min-height: 50px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+}
+
+.modal .modal-footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+
+.modal-title {
+    /* background-color: #3c5678 !important; */
+    /* color: #fff !important; */
+     padding-bottom: 2rem;
+}
+
+
+
+/* .modal .gig-dropdown .dropdown-content li>a,
+.modal .dropdown-content li>span {
+    font-size: 1rem;
+}
+
+.modal .input-field label {
+    position: absolute;
+    top: -26px;
+    font-size: 0.9rem;
+} */

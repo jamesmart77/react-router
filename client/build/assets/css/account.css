@@ -1,0 +1,172 @@
+.account-detail.card-panel {
+    padding: 1rem;
+}
+
+.account-header {
+    font-family: 'Roboto Slab', serif;
+    text-transform: none;
+    color: #353535;
+}
+
+.account-number {
+    font-family: 'Roboto Slab', serif;
+    /*text-transform: none;*/
+    color: #838383;
+    font-size: 1.25rem;
+}
+
+.account-due {
+    font-family: 'Roboto Slab', serif;
+    text-transform: none;
+    color: #ccc;
+}
+
+.account-balance,
+.account-avail,
+.account-limit,
+.account-fees {
+    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-size: 1.25rem;
+}
+
+.account-balance {
+    font-weight: 600;
+}
+
+.account-balance td {
+    font-size: 1.75rem;
+    color: #606060;
+}
+
+table.account-balances {
+    width: auto;
+    /*font-weight: bold;*/
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+}
+
+.account-balances td,
+.account-balances th {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.account-balances td.description {
+    position: relative;
+    text-align: right;
+    right: 0.5rem;
+}
+
+.account-balances td.stats {
+    text-align: left;
+}
+
+.account-balances span.badge.new {
+    font-family: 'Scope One', serif;
+    font-size: 1.25rem;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    line-height: 2rem;
+    height: 2.2rem;
+}
+
+/*---------------------------------
+    Account Detail 2
+-----------------------------------*/
+
+.account-detail .card-header {
+    background: #263238;
+    padding: 1rem 1.5rem;
+
+    background: -webkit-linear-gradient(45deg, #263238 0%, #374850 100%);
+    background: linear-gradient(0deg, #263238 0%, #374850 100%);
+}
+
+.gradient-45deg-light-blue-teal {
+  background: #b3e5fc;
+  background: -webkit-linear-gradient(45deg, #263238 0%, #263238 100%);
+  background: linear-gradient(45deg, #263238 0%, #263238 100%);
+}
+
+
+.account-avail {
+    font-size: 1.5rem;
+}
+
+.card-subtitle {
+    font-size: 1.25rem;
+}
+
+.card-subhead {
+    font-size: 1rem;
+}
+
+.account-num {
+    color: #ffffff7d;
+}
+
+/* Account Balances */
+.account-balance {
+    color: #bbf8ffcc;
+}
+
+.account-limit {
+    color: #ddfcffcc;
+}
+
+.account-fees {
+    color: #eafdffcc;
+}
+
+
+.account-detail .chip {
+    /*background-color: #fff;*/
+    border-bottom: 3px solid #0a0a0a33;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.account-detail .chips {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0;
+    min-height: 45px;
+    outline: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.account-detail .chips .input {
+    border-bottom: none;
+}
+
+.account-detail span.badge {
+    height: auto;
+    align-items: center;
+}
+
+.account-detail span.badge.new {
+    /*font-size: 1rem;*/
+    font-weight: 500;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+
+/*---------------------------------
+    Media Queries
+-----------------------------------*/
+@media screen and ( max-width: 900px ){
+    .account-header {
+        font-size: 75%;
+    }
+}
+
+@media screen and ( max-width: 600px ){
+    .account-header {
+        font-size: 60%;
+    }
+}
